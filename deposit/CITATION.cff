@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Cite the main paper and the DOI assigned to this first deposit. No new DOI is preassigned in this file."
+type: article
+title: "Retuned translated probes and the conditional bound Λ < 0.116398 for the de Bruijn–Newman constant"
+authors:
+  - family-names: Raymond
+    given-names: Dale James
+    orcid: "https://orcid.org/0009-0001-1682-8529"
+version: "1.0"
+date-released: "2026-10-10"
+abstract: >-
+  Assuming every nontrivial Riemann zeta zero has real part at most 7/8,
+  a computer-assisted translated-probe comparison gives the exact ceiling
+  0.116397726408291 for the de Bruijn-Newman constant. The proof uses
+  retuned physical source bounds, matched finite logarithmic coefficients
+  and 44 exact continuous-domain kernel certificates. Two 14899-step
+  rational histories reproduce and pass a separate auditor. The external
+  zero-free hypothesis is not established by the numerical checks.
+keywords:
+  - de Bruijn-Newman constant
+  - Riemann zeta function
+  - translated probes
+  - interval arithmetic
+  - exact polynomial certificates
+  - conditional theorem

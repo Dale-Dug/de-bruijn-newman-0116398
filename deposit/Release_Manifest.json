@@ -1,0 +1,97 @@
+{
+  "schema": "BCLD_ZENODO_DEPOSIT_V1",
+  "version": "1.0",
+  "date": "2026-10-10",
+  "title": "Retuned translated probes and the conditional bound Λ < 0.116398 for the de Bruijn–Newman constant",
+  "author": "Dale James Raymond",
+  "orcid": "0009-0001-1682-8529",
+  "doi": null,
+  "first_deposit": true,
+  "previous_0118_deposited": false,
+  "main_paper": "Conditional_0116398.pdf",
+  "hypothesis": "H_7_8",
+  "upper_exact": "116397726408291/1000000000000000",
+  "upper_decimal": "0.116397726408291",
+  "alternate_upper_exact": "14549715801039/125000000000000",
+  "headline": "Lambda < 0.116398",
+  "public_file_count": 16,
+  "files": {
+    "CITATION.cff": {
+      "bytes": 1099,
+      "sha256": "83f63a4b5960cdae705045a65b3550992b9d71ee6389e0f0218a2a97775be0ec"
+    },
+    "Conditional_0116398.pdf": {
+      "bytes": 426395,
+      "sha256": "6eec50fdb28f31211da2cfb9d5d3640b64723ec6c044ecc0db9774a1fe2e1b18"
+    },
+    "Conditional_0116398.tex": {
+      "bytes": 49836,
+      "sha256": "20226820c128f11e677820b83995c3609e024b207ce26e0c07ee22818e7ccd00"
+    },
+    "Further_Consequences.pdf": {
+      "bytes": 313893,
+      "sha256": "d41bc0b45208578a0243c1017bd0bed351889a6f8c6d732ac995dcf2105e200c"
+    },
+    "LICENSES_AND_RIGHTS.md": {
+      "bytes": 2713,
+      "sha256": "1995314b0b82e3c5a53d2a87580c2ef7864d40ff548ef00b4a0c1af310178383"
+    },
+    "Manuscript_Sources.zip": {
+      "bytes": 122505,
+      "sha256": "0fcb74e92ffcbdc4fcaa0e6952dc6641b6862ff56a1718c8093c8917642106f8"
+    },
+    "Matched_Source_Supplement.pdf": {
+      "bytes": 351343,
+      "sha256": "6165e0d554db9762112d647b9fb887bf15457573b12aa51fb05b20986987b49a"
+    },
+    "Prior_Analytic_Foundations.pdf": {
+      "bytes": 434186,
+      "sha256": "fe06339d12cfefe00b9da826ff812e31bb1be3cdaa698b78d4d85ad8b0ae53a9"
+    },
+    "Prior_Correlated_Translated_Probes.pdf": {
+      "bytes": 346256,
+      "sha256": "ad3e552b7429e685514cfa4ccfadebe9daf382c8000d95afb584932f0e226787"
+    },
+    "Proof_and_Replay.zip": {
+      "bytes": 123031589,
+      "sha256": "045bd7703019a78167e746c8260c0135803b80aa072d5ec0313d5a2b4cc85b89"
+    },
+    "README.md": {
+      "bytes": 7158,
+      "sha256": "9a3442c7587184bb3efee7018d07f281866dcdf03a5d5604c91fb790502bf82a"
+    },
+    "Verification_Guide.pdf": {
+      "bytes": 231108,
+      "sha256": "5f5dd42a7c054a38baaf9501bca17b0e90c974ffb9750b37e13a1485a5afa07e"
+    },
+    "Verification_Receipt.json": {
+      "bytes": 24250,
+      "sha256": "69c5860bbb7986aa41ef27aa86a605062fe217c636ecd4617b6a3951f4c20458"
+    },
+    "Verify_Deposit.py": {
+      "bytes": 9031,
+      "sha256": "28deea3a4ec83dd0fed0729e2490dae13c9218b0d170bbc154aec41beacfbb25"
+    }
+  },
+  "manifest_scope": "SHA-256 binds all payload files. SHA256SUMS.txt additionally binds this manifest; neither file tries to hash itself.",
+  "scientific_archive": {
+    "file": "Proof_and_Replay.zip",
+    "root": "BCLD_Certified_Retuning_20261010",
+    "unchanged_from_supplied_research_archive": true,
+    "active_configuration": "evidence/configs/main.json",
+    "selected_source_sha256": "a5064c427b11e73f13bfbae0efde00bf3691d9eb7bf8905929e183cd16fb6971"
+  },
+  "supplement_roles": {
+    "Matched_Source_Supplement": "Expanded current finite-source argument and historical sharp correction",
+    "Further_Consequences": "Separate stronger-strip implication and method-class limit; not main premises",
+    "Prior_Analytic_Foundations": "Unchanged reference; Gaussian/wall bound replaced by current Appendix B",
+    "Prior_Correlated_Translated_Probes": "Unchanged separate September paper; not a deposited 0.118 predecessor"
+  },
+  "claim_limits": {
+    "unconditional": false,
+    "end_to_end_formalisation": false,
+    "external_peer_review": false,
+    "global_optimality": false,
+    "RH": false
+  }
+}

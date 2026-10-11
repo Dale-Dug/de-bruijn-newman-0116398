@@ -1,0 +1,123 @@
+{
+  "schema": "BCLD_GITHUB_COMPANION_PREPARATION_V2",
+  "prepared_utc": "2026-10-11T01:29:41.857562+00:00",
+  "repository": "Dale-Dug/de-bruijn-newman-0116398",
+  "publication_doi": "10.5281/zenodo.23272725",
+  "record_url": "https://zenodo.org/records/23272725",
+  "record_api_url": "https://zenodo.org/api/records/23272725",
+  "record_updated_utc": "2026-10-10T23:49:30.864385+00:00",
+  "published_license_id": "cc-by-4.0",
+  "original_deposit_files": {
+    "CITATION.cff": {
+      "bytes": 1099,
+      "zenodo_md5": "4968dd1278936dc1682ebbe79354c664",
+      "url": "https://zenodo.org/api/records/23272725/files/CITATION.cff/content",
+      "sha256": "83f63a4b5960cdae705045a65b3550992b9d71ee6389e0f0218a2a97775be0ec"
+    },
+    "Conditional_0116398.pdf": {
+      "bytes": 426395,
+      "zenodo_md5": "066035cbbfc8a5f39a7c30bf6ef0df7a",
+      "url": "https://zenodo.org/api/records/23272725/files/Conditional_0116398.pdf/content",
+      "sha256": "6eec50fdb28f31211da2cfb9d5d3640b64723ec6c044ecc0db9774a1fe2e1b18"
+    },
+    "Conditional_0116398.tex": {
+      "bytes": 49836,
+      "zenodo_md5": "6df4f8c01c4dda7ee9dd87945ef4e8a4",
+      "url": "https://zenodo.org/api/records/23272725/files/Conditional_0116398.tex/content",
+      "sha256": "20226820c128f11e677820b83995c3609e024b207ce26e0c07ee22818e7ccd00"
+    },
+    "Further_Consequences.pdf": {
+      "bytes": 313893,
+      "zenodo_md5": "7a6e1a4068c76a779d596847bf7bdf81",
+      "url": "https://zenodo.org/api/records/23272725/files/Further_Consequences.pdf/content",
+      "sha256": "d41bc0b45208578a0243c1017bd0bed351889a6f8c6d732ac995dcf2105e200c"
+    },
+    "LICENSES_AND_RIGHTS.md": {
+      "bytes": 2713,
+      "zenodo_md5": "38d150632f0d6c220fd8d7be9143e7de",
+      "url": "https://zenodo.org/api/records/23272725/files/LICENSES_AND_RIGHTS.md/content",
+      "sha256": "1995314b0b82e3c5a53d2a87580c2ef7864d40ff548ef00b4a0c1af310178383"
+    },
+    "Manuscript_Sources.zip": {
+      "bytes": 122505,
+      "zenodo_md5": "13bd6ac41a1b9b072492545b426bedf4",
+      "url": "https://zenodo.org/api/records/23272725/files/Manuscript_Sources.zip/content",
+      "sha256": "0fcb74e92ffcbdc4fcaa0e6952dc6641b6862ff56a1718c8093c8917642106f8"
+    },
+    "Matched_Source_Supplement.pdf": {
+      "bytes": 351343,
+      "zenodo_md5": "118d4de65eca79970b3b9ae7524c3122",
+      "url": "https://zenodo.org/api/records/23272725/files/Matched_Source_Supplement.pdf/content",
+      "sha256": "6165e0d554db9762112d647b9fb887bf15457573b12aa51fb05b20986987b49a"
+    },
+    "Prior_Analytic_Foundations.pdf": {
+      "bytes": 434186,
+      "zenodo_md5": "e1e8ba4a1f91a65fb7caaa9b7dfc1b42",
+      "url": "https://zenodo.org/api/records/23272725/files/Prior_Analytic_Foundations.pdf/content",
+      "sha256": "fe06339d12cfefe00b9da826ff812e31bb1be3cdaa698b78d4d85ad8b0ae53a9"
+    },
+    "Prior_Correlated_Translated_Probes.pdf": {
+      "bytes": 346256,
+      "zenodo_md5": "f974f8b8f9274db5637eca2ab4a7319e",
+      "url": "https://zenodo.org/api/records/23272725/files/Prior_Correlated_Translated_Probes.pdf/content",
+      "sha256": "ad3e552b7429e685514cfa4ccfadebe9daf382c8000d95afb584932f0e226787"
+    },
+    "Proof_and_Replay.zip": {
+      "bytes": 123031589,
+      "zenodo_md5": "0d3e76e0d18cf33b14196bc77cd9d603",
+      "url": "https://zenodo.org/api/records/23272725/files/Proof_and_Replay.zip/content",
+      "sha256": "045bd7703019a78167e746c8260c0135803b80aa072d5ec0313d5a2b4cc85b89"
+    },
+    "README.md": {
+      "bytes": 7158,
+      "zenodo_md5": "5d938f1b98783e6eebd09ca3f1b4aa4d",
+      "url": "https://zenodo.org/api/records/23272725/files/README.md/content",
+      "sha256": "9a3442c7587184bb3efee7018d07f281866dcdf03a5d5604c91fb790502bf82a"
+    },
+    "Release_Manifest.json": {
+      "bytes": 3785,
+      "zenodo_md5": "e93349e44b0dabfb39dee472bcea59d8",
+      "url": "https://zenodo.org/api/records/23272725/files/Release_Manifest.json/content",
+      "sha256": "f99f3afade1561a91b1b6a7a9ac5e27aafac54b6a29cf93d3e59a799c919f4d5"
+    },
+    "SHA256SUMS.txt": {
+      "bytes": 1342,
+      "zenodo_md5": "b19335811781801e2d509c30fc5883a3",
+      "url": "https://zenodo.org/api/records/23272725/files/SHA256SUMS.txt/content",
+      "sha256": "6b40eaa09f037152e2cebbd70d1c2f16f7deb9d08ff85c21cc658a80692ced41"
+    },
+    "Verification_Guide.pdf": {
+      "bytes": 231108,
+      "zenodo_md5": "56e1ebbc03262d3b86090ce17e3e048b",
+      "url": "https://zenodo.org/api/records/23272725/files/Verification_Guide.pdf/content",
+      "sha256": "5f5dd42a7c054a38baaf9501bca17b0e90c974ffb9750b37e13a1485a5afa07e"
+    },
+    "Verification_Receipt.json": {
+      "bytes": 24250,
+      "zenodo_md5": "3dcce64b9e2943a2d0a00d0036d7fccb",
+      "url": "https://zenodo.org/api/records/23272725/files/Verification_Receipt.json/content",
+      "sha256": "69c5860bbb7986aa41ef27aa86a605062fe217c636ecd4617b6a3951f4c20458"
+    },
+    "Verify_Deposit.py": {
+      "bytes": 9031,
+      "zenodo_md5": "fc8d42ab63124341673900794cf4ac18",
+      "url": "https://zenodo.org/api/records/23272725/files/Verify_Deposit.py/content",
+      "sha256": "28deea3a4ec83dd0fed0729e2490dae13c9218b0d170bbc154aec41beacfbb25"
+    }
+  },
+  "mirrored_directory": "deposit",
+  "external_archive": "Proof_and_Replay.zip",
+  "source_preservation": "All 15 mirrored publication files are byte-for-byte copies retrieved from the public Zenodo record. Its pre-deposit README, citation, manifest and rights wording are preserved. The large scientific archive is linked, not redistributed here.",
+  "companion_changes": "New root README, DOI-aware citation, rights pointer, review guide, integrity manifest and restoration helpers. No archival payload or original checksum file was edited.",
+  "verification": {
+    "live_lightweight_files_zenodo_md5_and_published_sha256_checked": true,
+    "fresh_native_producer_replay_performed_for_github_preparation": false,
+    "external_mathematical_peer_review_performed": false,
+    "scope": "Companion preparation validates file identity and restoration. Original scientific verification receipts remain author-supplied evidence. No end-to-end mathematical verification or unconditional result is asserted.",
+    "live_full_archive_zenodo_md5_and_published_sha256_checked": true,
+    "live_both_zip_crc_checks_passed": true,
+    "live_standalone_main_tex_matches_source_zip": true,
+    "fresh_wall_production_performed_for_this_review": false,
+    "lean_execution_performed_for_this_review": false
+  }
+}

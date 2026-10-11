@@ -1,0 +1,95 @@
+{
+  "schema": "BCLD_GITHUB_FILES_V2",
+  "publication_doi": "10.5281/zenodo.23272725",
+  "scope": "All distributed companion files except this self-excluded manifest. Original 16-file deposit hashes are also in REPOSITORY_PROVENANCE.json.",
+  "files": {
+    "CITATION.cff": {
+      "bytes": 1606,
+      "sha256": "8585fcac76280c486f551e12acefb72685c33e981bd5e2a66cceba4e8e8af716"
+    },
+    "LICENSES_AND_RIGHTS.md": {
+      "bytes": 1627,
+      "sha256": "301d2a491a256854e12117b36ab85cb0fef5d362f21ff5da4eb0fa46044a9e9a"
+    },
+    "Prepare_Replay.py": {
+      "bytes": 4775,
+      "sha256": "06dbb6cf3a1fdd1e8d394ecc907f0e238ceb1a275e84c1a18dd3e7b30d743430"
+    },
+    "README.md": {
+      "bytes": 6338,
+      "sha256": "84a7cba0c8faaa40f2e5c0cc8e9edc39e383273ec0bdbe302acb64e948e5fff1"
+    },
+    "REPOSITORY_PROVENANCE.json": {
+      "bytes": 6452,
+      "sha256": "c8ea84fb22776ea5eb5358924ce7ee089a859e2e8e89f33b4c0d483af674c2e1"
+    },
+    "REVIEW.md": {
+      "bytes": 3153,
+      "sha256": "d4eef7b61293bd1d33490bd5c54531ee1be4325e6dbc1ed8f51985701b5a488a"
+    },
+    "Verify_GitHub_Files.py": {
+      "bytes": 2329,
+      "sha256": "1d96777589eaab7884c34067e97fd531f78866c891c9a2c35ffb72136d2e4e35"
+    },
+    "deposit/CITATION.cff": {
+      "bytes": 1099,
+      "sha256": "83f63a4b5960cdae705045a65b3550992b9d71ee6389e0f0218a2a97775be0ec"
+    },
+    "deposit/Conditional_0116398.pdf": {
+      "bytes": 426395,
+      "sha256": "6eec50fdb28f31211da2cfb9d5d3640b64723ec6c044ecc0db9774a1fe2e1b18"
+    },
+    "deposit/Conditional_0116398.tex": {
+      "bytes": 49836,
+      "sha256": "20226820c128f11e677820b83995c3609e024b207ce26e0c07ee22818e7ccd00"
+    },
+    "deposit/Further_Consequences.pdf": {
+      "bytes": 313893,
+      "sha256": "d41bc0b45208578a0243c1017bd0bed351889a6f8c6d732ac995dcf2105e200c"
+    },
+    "deposit/LICENSES_AND_RIGHTS.md": {
+      "bytes": 2713,
+      "sha256": "1995314b0b82e3c5a53d2a87580c2ef7864d40ff548ef00b4a0c1af310178383"
+    },
+    "deposit/Manuscript_Sources.zip": {
+      "bytes": 122505,
+      "sha256": "0fcb74e92ffcbdc4fcaa0e6952dc6641b6862ff56a1718c8093c8917642106f8"
+    },
+    "deposit/Matched_Source_Supplement.pdf": {
+      "bytes": 351343,
+      "sha256": "6165e0d554db9762112d647b9fb887bf15457573b12aa51fb05b20986987b49a"
+    },
+    "deposit/Prior_Analytic_Foundations.pdf": {
+      "bytes": 434186,
+      "sha256": "fe06339d12cfefe00b9da826ff812e31bb1be3cdaa698b78d4d85ad8b0ae53a9"
+    },
+    "deposit/Prior_Correlated_Translated_Probes.pdf": {
+      "bytes": 346256,
+      "sha256": "ad3e552b7429e685514cfa4ccfadebe9daf382c8000d95afb584932f0e226787"
+    },
+    "deposit/README.md": {
+      "bytes": 7158,
+      "sha256": "9a3442c7587184bb3efee7018d07f281866dcdf03a5d5604c91fb790502bf82a"
+    },
+    "deposit/Release_Manifest.json": {
+      "bytes": 3785,
+      "sha256": "f99f3afade1561a91b1b6a7a9ac5e27aafac54b6a29cf93d3e59a799c919f4d5"
+    },
+    "deposit/SHA256SUMS.txt": {
+      "bytes": 1342,
+      "sha256": "6b40eaa09f037152e2cebbd70d1c2f16f7deb9d08ff85c21cc658a80692ced41"
+    },
+    "deposit/Verification_Guide.pdf": {
+      "bytes": 231108,
+      "sha256": "5f5dd42a7c054a38baaf9501bca17b0e90c974ffb9750b37e13a1485a5afa07e"
+    },
+    "deposit/Verification_Receipt.json": {
+      "bytes": 24250,
+      "sha256": "69c5860bbb7986aa41ef27aa86a605062fe217c636ecd4617b6a3951f4c20458"
+    },
+    "deposit/Verify_Deposit.py": {
+      "bytes": 9031,
+      "sha256": "28deea3a4ec83dd0fed0729e2490dae13c9218b0d170bbc154aec41beacfbb25"
+    }
+  }
+}

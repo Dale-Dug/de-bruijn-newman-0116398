@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "Please cite the published conditional preprint using its version-specific Zenodo DOI."
+type: software
+title: "GitHub companion: Retuned translated probes and the conditional bound Λ < 0.116398 for the de Bruijn–Newman constant"
+authors:
+  - family-names: Raymond
+    given-names: Dale James
+    orcid: "https://orcid.org/0009-0001-1682-8529"
+version: "1.0"
+doi: "10.5281/zenodo.23272725"
+url: "https://zenodo.org/records/23272725"
+repository-code: "https://github.com/Dale-Dug/de-bruijn-newman-0116398"
+date-released: "2026-10-10"
+abstract: >-
+  Publication companion for a conditional computer-assisted comparison:
+  assuming every nontrivial Riemann zeta zero has real part at most 7/8,
+  Λ ≤ 0.116397726408291 < 0.116398 in the Polymath normalisation.
+  The numerical checks do not establish the zero-free hypothesis.
+  No unconditional record, RH proof or independent peer-review certification
+  is asserted. Original published files and their checksums are preserved.
+keywords:
+  - de Bruijn-Newman constant
+  - Riemann zeta function
+  - translated probes
+  - interval arithmetic
+  - exact polynomial certificates
+  - conditional theorem
+preferred-citation:
+  type: article
+  status: preprint
+  title: "Retuned translated probes and the conditional bound Λ < 0.116398 for the de Bruijn–Newman constant"
+  authors:
+    - family-names: Raymond
+      given-names: Dale James
+      orcid: "https://orcid.org/0009-0001-1682-8529"
+  version: "1.0"
+  year: 2026
+  date-released: "2026-10-10"
+  doi: "10.5281/zenodo.23272725"
+  url: "https://zenodo.org/records/23272725"

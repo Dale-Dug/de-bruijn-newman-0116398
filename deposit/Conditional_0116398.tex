@@ -1,0 +1,1034 @@
+\pdfminorversion=7
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage{microtype,booktabs,tabularx,array,longtable,enumitem,fancyhdr,xurl}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\HH}{\mathsf H}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\Log}{\operatorname{Log}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\F}{\mathbb F}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\setcounter{secnumdepth}{2}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setlength{\emergencystretch}{3em}
+\setlist{nosep,leftmargin=1.5em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Conditional bound by translated probes}
+\fancyhead[R]{\small D. J. Raymond}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{pdftitle={Retuned translated probes and the conditional bound Lambda < 0.116398 for the de Bruijn-Newman constant},pdfauthor={Dale James Raymond},pdfsubject={First-deposit version 1.0; conditional computer-assisted theorem},pdfkeywords={de Bruijn-Newman constant, translated probes, matched logarithmic coefficients, interval arithmetic}}
+\title{Retuned translated probes and the conditional bound\\
+$\Lambda<0.116398$ for the de Bruijn--Newman constant}
+\author{Dale James Raymond\\[3pt]
+\small ORCID: \href{https://orcid.org/0009-0001-1682-8529}{0009-0001-1682-8529}\\
+\small \href{mailto:dale_raymond@icloud.com}{\nolinkurl{dale_raymond@icloud.com}}}
+\date{10 October 2026 --- Version 1.0}
+\begin{document}\maketitle
+\begin{abstract}
+Assume that the Riemann zeta function has no nontrivial zeros in the open
+half-plane $\Rea s>7/8$. A computer-assisted argument gives
+\[
+\Lambda\le\frac{116397726408291}{10^{15}}
+=0.116397726408291<0.116398
+\]
+for the de Bruijn--Newman constant in the Polymath normalisation.
+The proof combines a retuned probe-height schedule, matched finite
+logarithmic coefficients and exact translated-kernel inequalities.
+The source calculation preserves common multiplicative phases and cancels
+shared convolution terms before bounding the remaining terms. A family of
+44 rational kernel certificates then adapts the comparison to the smaller
+height-ratio domains along the descent. Together these estimates improve
+the complete contraction rate, including the entire distinguished-pair
+subtraction. The physical evidence covers 608 closed time cells, six
+frequency classes including an unbounded final class, and all eleven
+translated class pairs. The retuned physical enclosures were produced in
+two interval-arithmetic constructions. Two 14,899-step rational histories
+reproduce byte-for-byte and pass a separately implemented auditor.
+The paper gives the global first-contact argument, the corrected Gaussian
+remainder and the continuous-domain kernel proof; the analytic supplements,
+editable sources and executable evidence accompany it. The $7/8$ assertion
+is an explicit hypothesis, not a conclusion of the numerical checks.
+\end{abstract}
+\noindent\textbf{2020 Mathematics Subject Classification.} Primary 11M26; secondary 65G30.\\
+\textbf{Keywords.} de Bruijn--Newman constant; translated probes; matched logarithmic
+coefficients; exact polynomial certificates; interval arithmetic.
+
+\section{Introduction}\label{sec:introduction}
+The de Bruijn--Newman constant $\Lambda$ is the threshold at which all zeros
+of the heat-deformed Riemann xi function are real. Heat-flow estimates can
+combine a time-zero strip, finite localisation walls and
+logarithmic-derivative bounds away from the zeros to give a quantitative
+upper bound \cite{polymath,pt}. This paper strengthens the translated-probe
+construction of \cite{raymond149} under an explicit narrower initial strip.
+
+For $1/2<\alpha\le1$, let $\HH_\alpha$ mean that every nontrivial zeta zero
+$\rho$ satisfies $\Rea\rho\le\alpha$. Zeros on the boundary are allowed.
+\begin{theorem}[Conditional upper bound]\label{thm:main}
+Assume $\HH_{7/8}$. In the normalisation of Section~\ref{sec:norm},
+\begin{equation}\label{eq:bound}
+\boxed{\Lambda\le\frac{116397726408291}{10^{15}}
+=0.116397726408291<0.116398.}
+\end{equation}
+\end{theorem}
+
+\subsection{Optimising the complete contraction rate}
+A useful probe must do more than give a large logarithmic-derivative lower
+bound. Its height, its translation and its kernel constant also determine
+how much zero contraction that bound supplies. The quantity to improve is
+\[
+ c=\frac{2\lambda}{h}\left(\ell-\frac Mh\right),
+\]
+where $\ell$ is the complete physical source floor and $M/h$ removes the
+whole contribution of the distinguished conjugate pair. Optimising only
+$\ell$ or only $\lambda$ can choose the wrong probe.
+
+The first step makes the trade-off concrete. The earlier prepared
+comparison used height $2.18$, a source floor about $6.3340$ and rate about
+$10.3210$. The present comparison uses height $1.88$, a smaller source
+floor about $6.0650$, and a larger rate about $11.1631$. The smaller source
+floor is more useful after the height and own-pair terms are included.
+These rounded values illustrate exact rational data, not sampled physical
+measurements.
+
+Three changes supply the improvement. First, the kernel family certifies
+larger constants on smaller height-ratio domains. Second, the physical
+estimates are regenerated at 274 changed probe heights. Third, the
+matched-logarithmic calculation retains the shared finite convolution
+before estimating the remainder. The final schedule selects one complete
+certified source row in each time cell and is frozen before the exact
+histories are generated. No source bound is moved to an uncertified height.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}Xr@{}}\toprule
+Construction in the retained development history & Exact primary ceiling\\\midrule
+Earlier undeposited comparison & 0.118068908899880\\
+New kernels; unchanged physical source & 0.117794794642445\\
+Retuned heights; basic joint source & 0.116787767525899\\
+Retuned heights; matched logarithmic source & \textbf{0.116397726408291}\\\bottomrule
+\end{tabularx}
+\end{center}
+The total reduction is $0.001671182491589$, approximately $1.41543\%$ of
+the earlier draft ceiling. All four comparisons use the same strict seed
+$9/16+10^{-6}$ and 32 substeps per source cell. The gain is therefore not
+from tightening the seed or increasing the time subdivision. This is a
+comparison of completed constructions, not a global-optimality claim.
+
+\subsection{Context, assumptions and scope}
+The $7/8$ assertion appears in the supplied OpenAI manuscript of
+30 September 2026 \cite{openai78}. Its 5 October companion states the
+different $11/12$ half-plane \cite{openai1112}. The pinned formal-source
+declaration is identified in \cite{openaiLean}; no execution of that
+formalisation is claimed here. The mathematical assumption used in this
+paper is exactly $\HH_{7/8}$, regardless of the external assertion's
+publication or review status.
+
+Polymath's heat-flow framework and the finite-RH result of Platt and
+Trudgian are analytic inputs \cite{polymath,pt}. The author's earlier
+public paper reports $\Lambda<0.149396$ from the classical initial strip
+\cite{raymond149}. That result uses a different initial hypothesis from the one here.
+The subsequent preprints discussed there, including Gomila and Gordon
+\cite{gomila,gordon}, and Planat's collective-contraction framework
+\cite{planat}, provide context. No numerical certificate from those three
+works is imported into Theorem~\ref{thm:main}. 
+
+The companion \emph{Further Consequences} records a separate implication
+from $\HH_{34/43}$ to $\Lambda<0.09$, its still-unproved covariance supplier,
+and a restricted limitation of the older source-table method. None is a
+premise of Theorem~\ref{thm:main}.
+
+\subsection{Reading the proof}
+Sections~\ref{sec:norm}--\ref{sec:matched} give the initial strip,
+localisation and finite logarithmic source argument.
+Section~\ref{sec:retuned} specifies the retuned source and its exact
+selection. Sections~\ref{sec:kernel}--\ref{sec:comparison} prove kernel
+domination and global comparison. Section~\ref{sec:replay} identifies the
+exact endpoint and verification boundary. The two appendices give the
+complete kernel-constant table and the Gaussian correction.
+The supplied \emph{Matched Source Supplement} expands the finite-source
+algebra; \emph{Prior Analytic Foundations} gives the physical approximation
+and localisation framework, with its Gaussian bound replaced explicitly
+by Appendix~\ref{app:gaussian} below.
+
+\section{Normalisation, initial separation and localisation}\label{sec:norm}
+Use the normalisation of \cite{polymath}:
+\begin{align}
+H_t(z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,\dd u,\label{eq:H}\\
+\Phi(u)&=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})
+ e^{-\pi n^2e^{4u}},\nonumber\\
+H_0(z)&=\tfrac18\xi((1+iz)/2),\qquad
+\partial_t H_t=-\partial_z^2H_t.\nonumber
+\end{align}
+Here $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$.
+The functions $H_t$ are real and even. The de Bruijn--Newman constant is the
+threshold such that $H_t$ has only real zeros exactly when $t\ge\Lambda$.
+De Bruijn's strip theorem, in \cite[Theorem 3.2]{polymath}, contracts a
+zero strip of half-height $Y$ at time $t$ to half-height at most
+$\sqrt{\max(Y^2-2\tau,0)}$ at time $t+\tau$.
+
+\begin{lemma}[Time-zero strip]\label{lem:initial}
+Under $\HH_{7/8}$ every zero of $H_0$ has $|\Ima z|\le3/4$.
+The initial squared comparison value used here is
+\begin{equation}\label{eq:q0}
+q_0=\frac{562501}{1000000}>\frac9{16},\qquad
+q_0-\frac9{16}=\frac1{1000000}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The functional equation reflects a nontrivial zero $\rho$ to $1-\rho$,
+so $1/8\le\Rea\rho\le7/8$. Its corresponding $H_0$ height in
+\eqref{eq:H} is $1-2\Rea\rho$. The strict seed inequality is exact.
+\end{proof}
+Ordinary contraction from this strip alone gives $\Lambda\le9/32$.
+The physical estimates below supply the additional contraction needed for
+the stated bound.
+
+Fix
+\[
+X_0=6000000185827,\qquad N_0=690988.
+\]
+The function $B_t$ is the nonvanishing analytic normaliser defined in the
+included Foundations, Part A, Section 4, with the same logarithm branches
+and normalisation throughout. The finite-head wall is valid for $x=X_0$, $0\le t\le41/250$ and
+$0\le y\le1$. With the corrected physical error allowance in
+Appendix~\ref{app:gaussian}, the unchanged ideal-prefix certificates imply
+\begin{equation}\label{eq:wall}
+\left|\frac{H_t(X_0+iy)}{B_t(X_0+iy)}\right|
+>\frac{79}{100}-\frac1{100}-\frac1{180}
+=\frac{697}{900}>\frac34.
+\end{equation}
+Both complete wall constructions are included. The finite-RH theorem of
+Platt--Trudgian verifies the exact ordinate $3000175332800$, which exceeds
+$(X_0+1)/2$ by $175239886$ \cite[Theorem 1]{pt}. Its original zero
+computation is cited, not repeated.
+
+Initially every zero inside the finite head is real. The wall, positivity
+of $H_t(iy)$, the enclosing classical strip, and local forward Hermite
+splitting at a real multiple zero prevent entry or birth of a nonreal zero
+in that head during the declared time range. Thus every prospective
+nonreal contact is at $|\Rea z|>X_0$. These are the localisation arguments
+of the included Foundations, Part A, Sections 2--3, with the safe wall
+\eqref{eq:wall}. No later narrow-strip or finite-canopy result is imported.
+
+\section{Uniform physical source bounds at all frequencies}\label{sec:physical}
+Define, only after proving probe nonvanishing,
+\[
+S(x,h,t)=-\Ima\frac{H_t'(x+ih)}{H_t(x+ih)}.
+\]
+The selected source in \nolinkurl{evidence/SOURCE_SELECTED.json} prescribes rational
+heights $h_i$ on the 608 closed cells
+\[
+I_i=[i/4000,(i+1)/4000],\qquad 0\le i<608.
+\]
+Its heights lie in $[69/100,47/25]$. The schedule is part of the theorem's finite data. Each comparison step
+uses the lower bound certified at its prescribed height, without
+interpolation between heights.
+For $s=\tfrac12\log(x/(4\pi))-\log N_0$, the six frequency classes are
+\[
+[0,1/20],\ [1/20,3/20],\ [3/20,2/5],\ [2/5,1],\ [1,2],\ [2,\infty).
+\]
+They cover every actual $x\ge X_0-2$. The source activation bounds include
+all native cutoffs, including future cutoffs in the unbounded final class.
+The translated points $x\pm a$, with $x\ge X_0$ and $|a|<2$, belong to
+one of the eleven class pairs $(j,j)$ or $(j,j+1)$. The original source proof establishes this same-or-adjacent-class
+restriction and handles the joins between classes.
+
+\subsection{Physical approximation and the labelled model}
+Put $L=\log(x/(4\pi))$, $b_t(n)=\exp(t\log^2n/4)$ and
+\[
+s_U^0=(1+h)/2+tL/4-i(x/2+\pi t/8),\qquad
+E_t(s)=\prod_{p\in\{2,3,5\}}(1-b_t(p)p^{-s}).
+\]
+Multiplying the \emph{finite} first and reflected branches by $E_t$ gives
+the complete labelled model
+\[
+Q=1+\sum_{j>0}a_jz_j,\qquad
+V=\sum_{j>0}\lambda_ja_jz_j,\qquad Q_h=-V/2,
+\]
+with $a_j,\lambda_j\ge0$, $|z_j|=1$ and all reflected and product-tail
+labels retained. Certified masses satisfy
+\[
+\bar A\ge\sum a_j,\quad \bar B\ge\sum\lambda_ja_j,
+\quad\bar A<4/5.
+\]
+The source first proves nonvanishing, then divides to obtain
+\begin{equation}\label{eq:physical}
+S>\ell+\frac{C-\Rea(V/Q)}2+
+\left(E_\ell-\Rea(E_h/E)\right).
+\end{equation}
+The floor $\ell$ already includes subtraction of the physical errors.
+The term $E_\ell$ is the source's phase-free upper cap for
+$\Rea(E_h/E)$; their difference is a nonnegative phase deficit.
+
+The all-real-abscissa Riemann--Siegel/Gaussian derivation and its frozen-native-
+cutoff Cauchy disk are in the Foundations, Part A, Sections 4--5. The
+actual disks obey $x\ge X_0-4$, $0.54\le y\le2.41$, and
+$0\le t\le19/125$. The calculation includes the value error, the complete edge pair and the
+derivative error, and proves denominator exclusion. Appendix~\ref{app:gaussian}
+corrects the coarse Gaussian comparison on this domain and checks the complete
+physical-error rows of the original and retuned source constructions. The argument at $h>1$ uses the enlarged-height
+derivation rather than the restricted-height basic approximation theorem.
+Cauchy's estimate is applied to the holomorphic error on the frozen-cutoff
+disk, not to a nonholomorphic leading-model error.
+
+\subsection{Retaining the common phase}
+For $c_\pm\ge c_0\ge0$, $|z|=|u|=1$ and $\varepsilon\in\{1,-1\}$,
+\begin{equation}\label{eq:phase}
+\frac{c_+(1-\varepsilon\Rea(zu))+c_-(1-\varepsilon\Rea(z\bar u))}{2}
+\ge c_0(1-|\Rea u|).
+\end{equation}
+Each factor $1-\varepsilon\Rea(zu^{\pm1})$ is nonnegative, so replacing
+$c_\pm$ by $c_0$ gives a lower bound. The identity
+$\Rea(zu)+\Rea(z\bar u)=2\Rea z\Rea u$ completes the estimate.
+The original translated-probe refinement applies this only to identified
+nonnegative cone-surplus terms and retains separate denominators at the
+two points. It handles the constant/head pairs through index 1024 and the
+first eight harmonics for the three finite Euler factors. Only the selected positive deficits contribute to the estimate; the
+remaining deficits are discarded throughout the calculation.
+
+\section{Matched finite logarithmic overlap}\label{sec:matched}
+Matching the common finite-head terms gives an additional lower bound
+for the paired source. The matched-source supplement, Sections 3--8,
+contains the complete coefficient, support and numerical constructions. All logarithmic
+identities below are formal coefficient identities; no convergent
+positive-time Euler product is assumed.
+
+\subsection{A formal positivity statement}
+All algebra here is formal Dirichlet convolution:
+$(f*g)(n)=\sum_{d\mid n}f(d)g(n/d)$. The function $\delta$ is its unit,
+$\delta_p$ is one at $p$ and zero elsewhere, and $\log_*f$ is the formal
+convolution logarithm of a series with $f(1)=1$. Write
+\[
+\mathcal Df(n)=(\log n)f(n),\qquad
+c_t=b_t*\prod_{p\in\{2,3,5\}}(\delta-b_t(p)\delta_p),
+\qquad \widetilde d_t=\mathcal D\log_*c_t.
+\]
+\begin{lemma}\label{lem:positive}
+For every integer $n\ge1$ and $t\ge0$, the coefficients $c_t(n)$ and
+$\widetilde d_t(n)$ and all their time derivatives are nonnegative.
+Moreover $c_t(1)=1$ and $c_t(p)=\widetilde d_t(p)=0$ for $p=2,3,5$.
+\end{lemma}
+\begin{proof}
+For $d_t=\mathcal D\log_*b_t$, the derivation rule and
+$\partial_t b_t=\mathcal D^2b_t/4$ give
+\[
+\partial_t d_t(n)=\frac{\log^2n}{4}d_t(n)
++\frac{\log n}{4}\sum_{ab=n,\ a,b\ge2}d_t(a)d_t(b).
+\]
+The initial coefficients are the nonnegative von Mangoldt coefficients.
+Induction on $n$ and the integrating-factor formula prove positivity of
+all derivatives. At a selected prime power, put $\kappa=\log^2p/4$ and
+$e_k=d_t(p^k)-(\log p)e^{k\kappa t}$. Then
+\[
+e_k'=k^2\kappa e_k+(k^2-k)\kappa(\log p)e^{k\kappa t}
++\frac{k\log p}{4}\sum_{j=1}^{k-1}d_t(p^j)d_t(p^{k-j}),\quad e_k(0)=0.
+\]
+Its forcing has all derivatives nonnegative. Elsewhere $\widetilde d=d$.
+Finally the exact recurrence
+\begin{equation}\label{eq:conv}
+(\log n)c_t(n)=\sum_{d\mid n,\ d\ge2}\widetilde d_t(d)c_t(n/d)
+\end{equation}
+proves the assertion for $c$ by induction. The selected primes vanish
+identically.
+\end{proof}
+For positive $t$, the infinite numerical heat-weighted Dirichlet series
+converges at no fixed abscissa. The argument uses the preceding identities coefficientwise, and all
+products evaluated below are finite.
+
+\subsection{Cancelling shared terms before enclosure}
+Let $\sigma=\Rea s_U^0$ and $K=8192$. In the complete first head through
+$N_0$, the physical phases obey $z_dz_m=z_{dm}$. Define
+\begin{align*}
+T&=\sum_{2\le d\le K}\widetilde d_t(d)d^{-\sigma}z_d,
+& D_K&=\sum_{2\le d\le K}\widetilde d_t(d)d^{-\sigma},\\
+Z&=\sum_{2\le d\le K}\widetilde d_t(d)d^{-\sigma}
+       \sum_{2\le m\le N_0/d}c_t(m)m^{-\sigma}.&&
+\end{align*}
+The matching uses only the first-head labels, where the multiplicative
+relations hold. The reflected and product-tail labels remain separate.
+By \eqref{eq:conv}, the shared mass between $QT$ and $V$ through the common
+head is $D_K+Z$. Remove it from both sums before using the triangle inequality:
+\begin{equation}\label{eq:resid}
+|QT-V|\le\bar B+(1+\bar A)D_K-2(D_K+Z)
+=\bar B-(1-\bar A)D_K-2Z.
+\end{equation}
+The right side bounds the mass of the unmatched labelled terms and is
+therefore nonnegative. Using $|Q|\ge1-\bar A$ when dividing gives
+\begin{equation}\label{eq:quotient}
+\Rea(V/Q)\le
+\frac{\bar B-2Z}{1-\bar A}-(D_K-\Rea T).
+\end{equation}
+The terms containing $D_K$ are combined algebraically before enclosure.
+They do not receive separate upper and lower bounds that would lose the
+cancellation.
+Substitution in \eqref{eq:physical} gives
+\begin{equation}\label{eq:newS}
+S>F+\frac{D_K-\Rea T}{2}+
+\left(E_\ell-\Rea(E_h/E)\right),
+\qquad
+F=\ell+\frac C2-\frac{\bar B-2Z_{\rm low}}{2(1-\bar A)}.
+\end{equation}
+The extra overlap is a positive finite sum, so it can be replaced by the
+certified lower enclosure $Z_{\rm low}$. This estimate and the cone-surplus
+estimate bound the same physical quantity. Either may be selected, but their
+gains cannot be added.
+
+\subsection{Paired logarithmic and grouped-head alternatives}
+At $x\pm a$, the first-head phases satisfy
+$z_d^\pm=z_d^c\exp(\pm ia\log d/2)$. From \eqref{eq:phase} and
+Lemma~\ref{lem:positive}, a complete source-class pair $j\le k$ has the
+following guaranteed logarithmic deficit:
+\[
+G_{k,a}=\sum_{2\le d\le K}\widetilde d_{t_-}(d)d^{-\sigma_{k,+}}
+\inf_{a\in I_a}\left(1-|\cos(a\log d/2)|\right),
+\quad
+\sigma_{k,+}=(1+h)/2+t_+L_{k,+}/4.
+\]
+The higher upper abscissa supplies a coefficient lower bound valid at
+both points. Therefore
+\begin{equation}\label{eq:logpair}
+\frac{S(x-a,h,t)+S(x+a,h,t)}2
+>\frac{F_j+F_k+G_{k,a}}2+G^{\rm Euler}_{jk,a}.
+\end{equation}
+The finite logarithmic estimate is certified on the first 320 time rows
+and the five bounded frequency classes. The remaining rows and the unbounded
+class use their complete cone/Euler estimates. The assembler enforces these
+domains and does not extrapolate beyond them.
+
+A separate grouped-head alternative retains pairs with both indices in
+$[2,2048]$, disjoint from the constant/head pairs. Its signed coefficients
+and each complete group phase interval are retained; the same identity
+\eqref{eq:phase} supplies the deficit. It is an alternative to
+\eqref{eq:logpair}. For each class pair, the assembler selects the largest valid lower bound.
+It then takes the minimum over all eleven class pairs. This selection rule
+avoids counting any shared contribution twice.
+
+\section{Retuned physical source and exact selection}\label{sec:retuned}
+The physical observable remains
+\[
+ S(x,h,t)=-\Ima\frac{H_t'}{H_t}(x+ih),\qquad
+ \frac{S(x-rh,h,t)+S(x+rh,h,t)}2\ge\ell_{i,r}.
+\]
+Probe nonvanishing is established before division, as in the retained
+source theorem \cite{source}. No old lower bound is interpolated in $h$.
+The all-frequency source region, native-cutoff treatment, two reflected
+branches and corrected Gaussian error argument are unchanged.
+
+\subsection{Coverage and production scope}
+The new frozen plan contains 608 closed time cells
+$[i/4000,(i+1)/4000]$, $0\le i<608$, through time $0.152$.
+There are six frequency ranges per cell, including an unbounded final
+range. Every same-class pair and every adjacent-class pair is included:
+six plus five possibilities. The physical source starts at
+$X_0-2$, where $X_0=6{,}000{,}000{,}185{,}827$ and $N_0=690{,}988$.
+All future native cutoffs in the final range remain covered.
+
+Relative to the old plan, exactly 274 heights change. The new heights
+lie between $0.69$ and $1.88$; the old maximum was $2.18$.
+For example, the first height becomes $47/25$ rather than $109/50$.
+The source producer's enlarged analytic height domain already covers
+this range. Its Cauchy-disk, activation, mass and denominator acceptance
+conditions are checked at the actual time--height cells, not on an
+invalid rectangle formed by pairing the smallest height with time zero.
+
+All 608 cells are freshly produced in both constructions, including the
+cells whose height did not change. Construction A uses 192-bit interval
+arithmetic and integer-bin division 800; construction B uses 256 bits
+and division 900, with a different derivative construction. Each is
+produced in four adjoining blocks, with endpoints $0$--$151$,
+$152$--$303$, $304$--$455$ and $456$--$607$. Complete arrays and receipts
+are reconstructed after every block is present.
+Both constructions use the same bundled Arb/FLINT library; they are not
+independent transcendental implementations.
+
+Exact source reconstruction checks 127,680 acceptance inequalities and
+26,752 overlaps of the two constructions' temporal interval enclosures.
+The corrected Gaussian and physical-error safety checks pass on all
+1,216 error rows. The 256-bit and 384-bit finite-head wall files are
+retained byte-for-byte. Those wall computations, and the published
+finite-RH computation, are not represented as fresh production.
+
+\subsection{Matched logarithmic coefficients at the new heights}
+The joint translated-source producer is rerun in both constructions over
+the complete schedule. Its exact reassembly checks 1,284,096 conditions.
+The matched-logarithmic producer is then rerun at the same new heights,
+with the original finite logarithmic head of 8,192 on the first 320
+cells, common native head 690,988, and head-pair groups through 2,048 on
+all 608 cells \cite{matchedsource}.
+
+The improvement retains the original order of operations: common finite
+convolution terms are cancelled before absolute values are taken, and a
+complete bound is formed only after all remaining errors and the
+logarithmic-derivative denominator are paid. This yields 9,120 positive
+head-pair credits and 6,384 improvements from the matched-log alternative
+in this reassembly. Cross-construction checks agree on 608 heat-coefficient
+grids, 315 available logarithmic-phase grids, and 560 head-group phase
+grids. A cache entry without a logarithmic grid is not treated as though
+it had one.
+
+The focused 16-band source producer is \emph{not} rerun at new heights.
+Instead, the new valid broad continuum bound is used in every narrow
+band. At cells with exactly the same height and time as the old source,
+the maximum of the two complete valid bounds is allowed. This is a
+maximum of whole certified estimates, never an unverified mixture of a
+numerator from one construction and a denominator from another.
+
+\subsection{A frozen whole-cell choice}
+A rational discovery pass selects either the old enhanced source or the
+new complete source in each cell. The resulting list of 608 provider
+indices is frozen before the final histories are regenerated. It selects
+466 new-source cells and 142 old-source cells; 274 selected heights
+actually differ from the original heights. A new provider may improve
+the floor even where its height is unchanged.
+
+For every selected cell, the height and entire row of lower bounds are
+copied from the chosen provider. The independent reconstruction checks
+this operation verbatim and binds the resulting source to all four
+comparison configurations by SHA-256. Neither a sampled optimum nor
+greedy global optimality is a premise. Any complete, valid frozen choice
+would give a legitimate comparison; this particular one gives
+\eqref{eq:bound}.
+
+
+\begin{proposition}[Selected physical source]\label{prop:source}
+For every cell $I_i$ and either consumed shift $r=23/40$ or $r=3/5$,
+the selected source supplies a rational lower bound $\ell_{i,r}$ such that
+\[
+ \frac{S(x-rh_i,h_i,t)+S(x+rh_i,h_i,t)}2>\ell_{i,r}
+ \qquad(t\in I_i,\ x\ge X_0).
+\]
+The assertion includes all six frequency classes, all eleven translated
+class pairs and every future native cutoff in the unbounded class.
+\end{proposition}
+\begin{proof}
+The physical approximation and corrected remainder give
+\eqref{eq:physical}. The common-phase estimate \eqref{eq:phase}, the
+matched overlap \eqref{eq:resid} and the paired alternatives give valid
+bounds for each class pair. The interval producers enclose their finite
+masses, derivatives and phases on the complete time--height--frequency
+cells. The exact reconstruction checks the activation and denominator
+conditions, selects the strongest complete alternative for each pair,
+and then takes the minimum over all eleven possibilities.
+The selected source copies a complete valid row, including its height,
+from one provider. The reconstruction checks this copy exactly.
+Thus selection preserves each provider's all-frequency statement.
+\end{proof}
+\section{Full-domain kernel comparison}\label{sec:kernel}
+At a simple highest upper zero $x+iy$, write $q=y^2$. The canonical
+zero-motion identity, grouped into conjugate pairs, is
+\begin{equation}\label{eq:motion}
+ q'=-2-4y\sum_{\rm other\ pairs}K_y(d_j,b_j).
+\end{equation}
+The own conjugate contributes $-2$ exactly once. Real zeros have half-pair
+weight, and the paired imaginary sums converge absolutely
+\cite[Proposition 3.1]{polymath}. The task is to bound the remaining sum
+from the source at the higher probes.
+
+For $h>0$, define the conjugate-pair kernel
+\begin{equation}\label{eq:kernel}
+ K_h(d,b)=\frac{h-b}{d^2+(h-b)^2}
+          +\frac{h+b}{d^2+(h+b)^2}.
+\end{equation}
+A translated observation at displacement $rh$ uses
+\[
+ J_{h,r}(d,b)=\frac{K_h(d+rh,b)+K_h(d-rh,b)}2.
+\]
+The useful inequality has the form
+\begin{equation}\label{eq:comparison}
+ 2K_y(d,b)\ge\lambda\frac yh J_{h,r}(d,b),
+ \qquad 0<y\le\rho h,\quad 0\le b\le y,\quad d\in\mathbb R.
+\end{equation}
+The point $(d,b)=(0,y)$ is excluded because $K_y$ is undefined there.
+It is the distinguished contact pair, removed before this inequality is
+summed. A multiple contact is treated by the separate contact argument;
+no artificial value or path-independent limit is assigned at the singular
+point.
+
+\begin{proposition}[New certificate family]\label{prop:kernels}
+All 44 triples $(r,\rho,\lambda)$ in Appendix~\ref{app:catalogue} satisfy
+\eqref{eq:comparison}. The shifts are $r=23/40$ and $r=3/5$.
+For each shift, the 22 values of $100\rho$ are
+\[
+ \begin{gathered}
+ 5,10,15,20,25,28,30,31,32,33,34,\\
+ 35,36,37,38,39,40,41,42,43,44,45.
+ \end{gathered}
+\]
+Every $\lambda$ is an explicitly stored positive rational, at most two.
+For example, the first two actively used domain refinements include
+\[
+ (r,\rho,\lambda)=\left(\frac{23}{40},\frac25,\frac{99641}{50000}\right),
+ \qquad\left(\frac35,\frac25,\frac{198313}{100000}\right).
+\]
+\end{proposition}
+
+\begin{proof}
+Scale $h$ to one and put
+\[
+ D=d^2/h^2,\qquad v=y^2/h^2,\qquad B=b^2/h^2,\qquad R=r^2.
+\]
+Introduce the polynomials
+\begin{align*}
+ C&=D+R+1+B,& A&=C^2+4DR-4B,\\
+ D_4&=A^2-16DRC^2,&G&=A(C-2B)-8DRC,\\
+ Q&=(D+v-B)^2+4DB.
+\end{align*}
+Pairing the two translations first removes the square root of $D$.
+After multiplication by positive denominators, \eqref{eq:comparison}
+is equivalent to
+\begin{equation}\label{eq:polynomial}
+ P=(D+v-B)D_4-\frac{\lambda}{2}QG\ge0.
+\end{equation}
+The translated denominators are positive because $b/h\le\rho<1$.
+The remaining denominator vanishes only at the excluded point.
+
+Set $D=z/(1-z)$, $v=\rho^2p$, $B=\rho^2pq$. Then
+\[
+ \widetilde P(z,p,q)=(1-z)^5P\bigl(z/(1-z),\rho^2p,\rho^2pq\bigr)
+\]
+is a polynomial of degree at most five in each variable. The required
+finite domain is the cube $0\le z,p,q\le1$, with $z=1$ included by
+polynomial continuation.
+Each certificate stores its rational coefficients, up to an independently
+checked positive scalar, and a complete binary subdivision of this cube.
+On every leaf, all tensor Bernstein coefficients are nonnegative. Since
+the Bernstein basis is nonnegative on the cube, this proves the assertion.
+
+The independent verifier does not import the searcher's polynomial algebra.
+It evaluates the closed expression \eqref{eq:polynomial} and the stored
+polynomial on the exact tensor grid
+$\{0,1/6,\ldots,5/6\}^3$. The degree bound and six distinct nodes per
+variable make this an unisolvent polynomial-identity check, not sampled
+positivity. It also checks the positivity of the scalar normalisation.
+For a degree-$n$ Bernstein coefficient vector $b$, the two half-interval
+restrictions are independently computed by
+\[
+ b_k^L=2^{-k}\sum_{j=0}^{k}\binom kj b_j,\qquad
+ b_k^R=2^{-(n-k)}\sum_{j=k}^{n}\binom{n-k}{j-k}b_j.
+\]
+These matrices are applied along the chosen coordinate at each split.
+The partition verifier requires both children, forbids duplicate leaves
+and forbids a leaf together with one of its descendants. Thus there is no
+unverified gap in the cube cover.
+The complete run checks 9,504 exact identities, 331 leaves and 71,496
+Bernstein coefficients. Seven deliberately corrupted inputs are rejected.
+\end{proof}
+
+\subsection{The whole distinguished-pair subtraction}
+At a zero of height $y$, write $w=y^2/h^2$. The distinguished pair's
+normalised contribution at the translated probes is
+\begin{equation}\label{eq:self}
+ s_r(w)=\frac{2(1+r^2-w)}{(1+r^2-w)^2+4r^2w}.
+\end{equation}
+The constants used by the new certificates are
+\[
+ M_{23/40}=\frac{1503067131}{10^9},\qquad M_{3/5}=\frac{25}{17}.
+\]
+The bound $s_r(w)\le M$ for $0\le w\le\rho^2$ is verified by checking
+nonnegativity of the quadratic
+\begin{equation}\label{eq:selfpoly}
+ Mw^2+\{M(2r^2-2)+2\}w+M(1+r^2)^2-2(1+r^2).
+\end{equation}
+Its endpoints and any interior minimum are checked exactly. The scalar
+auditor separately checks the same condition on the full incoming
+comparison interval at every step. An own-pair cap at just one sampled
+height would not suffice.
+
+If the physical translated source has lower bound $\ell$, summing
+\eqref{eq:comparison} after removing the distinguished pair gives the rate
+\begin{equation}\label{eq:rate}
+ q'<-2-cq,\qquad
+ c=\frac{2\lambda}{h}\left(\ell-\frac Mh\right)>0,
+ \qquad q=y^2.
+\end{equation}
+The $-2$ is the own-conjugate contraction. The $M/h$ term subtracts the
+entire contribution of that pair from the source; it is not optional.
+Real zeros retain the half-weight convention of the zero-motion formula.
+
+
+The history uses only fixed shifts. The retained code also supports a
+continuum sharp mode, but no main-history step selects it. In that mode
+one must evaluate the displacement at the actual contact height and
+cover every swept displacement band; freezing the incoming displacement
+with the sharp incoming self cap is invalid. The source supplement records
+that correction explicitly. The present fixed-shift proof instead uses
+\eqref{eq:selfpoly} on the entire incoming height interval.
+
+\section{Global zero-height comparison}\label{sec:comparison}
+Every time cell is divided into 32 equal pieces:
+\[
+\Delta t=\frac1{128000}.
+\]
+At each incoming certified upper value $q$, choose an admissible positive
+rate \eqref{eq:rate}. Its comparison solution is
+\begin{equation}\label{eq:flow}
+Q(t+\tau)=\left(q+\frac2c\right)e^{-c\tau}-\frac2c.
+\end{equation}
+The program rounds each endpoint upwards and uses that upper bound to
+start the next step. Another strip estimate or spatial guard never lowers
+the restart value.
+
+For a step starting at $q$, the selected certificate must satisfy
+$q/h_i^2\le\rho^2$ and $|rh_i|<2$. The comparison decreases, so the same
+kernel domain holds throughout the step. The own-pair polynomial is
+checked on all $0\le w\le q/h_i^2$. These whole-interval tests are what
+allow a fixed translation to be used safely; a self cap at just the
+incoming height would not be enough.
+
+\begin{lemma}[Global first-contact comparison]\label{lem:contact}
+Under the hypotheses and certificates above, the piecewise flow
+\eqref{eq:flow} and its upward restarts enclose the squared imaginary
+height of every zero through the declared terminal step.
+\end{lemma}
+\begin{proof}
+The first-rate check gives
+\[
+q_0-(2+c_0q_0)10^{-8}>9/16.
+\]
+The comparison is convex and above its tangent. Together with de Bruijn's
+contraction from the initial strip, this establishes a positive interval
+of strict separation.
+
+On a closed time interval bounded away from zero, positive-time confinement
+in \cite[Theorem 1.5(i)]{polymath} confines possible nonreal zeros to a
+bounded real range. The wall localises a contact to $|x|>X_0$. Thus a
+first-contact argument takes place on an actual compact zero set; no
+possibly unattained global supremum is differentiated.
+
+A multiple upper contact is impossible: the backward Hermite splitting of
+\cite[Proposition 3.1(ii)]{polymath} produces an upper branch at an earlier
+time with height excess of order $\sqrt\epsilon$, whereas the positive
+barrier changes by $O(\epsilon)$. This contradicts previous separation.
+At a simple contact all other zero heights are below the barrier, so the
+full kernel inequality and source floor apply. The contact derivative is
+strictly smaller than the comparison derivative by \eqref{eq:rate},
+excluding a first crossing. Equivalently one can use the upper Dini
+derivative of the finitely many local simple branches and integrating-factor
+comparison. At a time knot the preceding left-hand inequality applies;
+an upward restart cannot create a contact. These alternatives cover every
+prospective first contact.
+\end{proof}
+
+Stop the final step at $q_e=10^{-8}$. The exact comparison travel time is
+\begin{equation}\label{eq:lag}
+\tau_e=\frac1c\log\left(1+\frac{c(q-q_e)}{2+cq_e}\right).
+\end{equation}
+The auditor verifies $0<\tau_e\le\Delta t$, ensuring that the last source
+bound remains valid throughout the terminal interval. Lemma~\ref{lem:contact} and ordinary strip
+contraction give
+\begin{equation}\label{eq:terminal}
+\Lambda\le t+\tau_e+\frac{q_e}{2}.
+\end{equation}
+The bound includes the full final strip-contraction time $q_e/2$.
+If all zeros become real sooner, the same upper bound still holds.
+
+\section{Exact endpoint and reproducibility}\label{sec:replay}
+\subsection{Two rational constructions}
+The primary producer bounds $e^{-x}$, $0\le x<1$, by its even degree-18
+Taylor sum and rounds squared-height endpoints upward on the $2^{-96}$
+grid. The alternate uses the reciprocal of the positive degree-12 Taylor
+sum for $e^x$ and the $2^{-112}$ grid. For the final $\log(1+z)$,
+$0<z<1$, the primary uses the odd degree-11 sum and the alternate uses
+$z-z^2/(2(1+z))$. Both total terminal times are rounded upward to
+multiples of $10^{-15}$.
+
+The separate scalar auditor imports neither the producer nor its
+selector. It uses an even degree-20 exponential sum and an odd degree-13
+logarithmic sum with exact powers and factorials. It verifies the
+hypothesis and seed, initial delay, source identity, every time join,
+kernel eligibility, complete own-pair subtraction, every positive rate,
+all outward endpoints and the terminal contraction. Agreement with the
+producer is required at the exact inequality level, not just in displayed
+decimal digits.
+
+\begin{center}\small
+\begin{tabular}{@{}lrr@{}}\toprule
+Construction & Steps & Exact decimal ceiling\\\midrule
+Primary & 14,899 & 0.116397726408291\\
+Alternate & 14,899 & 0.116397726408312\\\bottomrule
+\end{tabular}
+\end{center}
+Each construction uses $r=23/40$ on 1,024 steps and $r=3/5$ on 13,875
+steps. The terminal source index is 465, and the final substep starts at
+$7449/64000$. Its permitted source interval ends at $14899/128000$.
+The exact final logarithmic travel time lies inside that interval.
+Both histories have been regenerated byte-for-byte from the selected
+source and checked by the separate auditor. Corrupted-history rejection
+tests are retained with the verification receipts.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Lemma~\ref{lem:initial} gives the initial strip and strict separation.
+The corrected wall localises every possible nonreal contact.
+Proposition~\ref{prop:source} and the full-domain kernel certificates
+supply the strict rate bound \eqref{eq:rate} at every simple contact;
+Lemma~\ref{lem:contact} handles the global comparison, including multiple
+contacts and time joins. The independently audited primary history
+bounds the terminal travel time in \eqref{eq:lag}. Adding the complete
+$q_e/2$ contraction allowance and rounding upward gives
+\eqref{eq:bound}.
+\end{proof}
+
+\subsection{Separating the verification layers}
+A hash identifies data; it does not establish a physical inequality.
+The evidence therefore separates the analytic derivation, interval
+production, exact reconstruction and scalar audit.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}p{31mm}XX@{}}\toprule
+Obligation & Written argument & Executable check\\\midrule
+Initial strip & Section~\ref{sec:norm}, conditional on $\HH_{7/8}$ & Seed and positive-delay tests\\[3pt]
+Physical source & Sections~\ref{sec:physical}--\ref{sec:retuned}; source supplement; Foundations & Raw interval records, coverage and complete exact reconstruction\\[3pt]
+Gaussian error and wall & Appendix~\ref{app:gaussian}; Foundations & Safety inequalities and retained wall certificates\\[3pt]
+Kernel and self pair & Section~\ref{sec:kernel}; Appendix~\ref{app:catalogue} & Independent polynomial identity, full cube cover and self-cap tests\\[3pt]
+Global comparison & Section~\ref{sec:comparison} & Complete joins and source binding\\[3pt]
+Terminal bound & This section & Two rational histories and separate auditor\\\bottomrule
+\end{tabularx}
+\end{center}
+
+\texttt{Proof\_and\_Replay.zip} contains the frozen scientific evidence,
+raw source enclosures, original production receipts, analytic source
+texts and all eight final-source histories. Only the two configurations
+labelled \texttt{main} prove the headline under $\HH_{7/8}$; the other
+six use separately stated initial strips. The \emph{Verification Guide}
+gives the integrity-only, stored-source and native-production commands.
+The stored-source audit reconstructs the full source and reruns the exact
+comparisons. The optional native replay reruns the transcendental
+producers at the frozen retuned plan. These are different operations.
+
+The two native constructions use the same Arb/FLINT library
+\cite{arb}, with different precision, integer partition and derivative
+construction. The finite-head wall data are retained, not regenerated in
+the retuning; the published finite-RH computation is not repeated.
+The programs do not prove the external $7/8$ assertion or formalise the
+complete analytic argument. No external referee certification,
+unconditional record, global optimum or proof of RH is claimed.
+
+\paragraph{Release and attribution.}
+This is version 1.0 of the first deposit of the $0.116398$ conditional
+paper. Earlier $0.118$ files remain in the immutable evidence as
+\emph{undeposited development drafts}. The separate September record \cite{raymond149} retains its own
+identity and review status.
+
+\paragraph{AI assistance.}
+The AI assisted with the derivations, code, numerical work and exposition.
+The named author is responsible for the submitted claims. The supplied
+checks and explicit assumptions, rather than this disclosure, define the
+verification scope.
+
+\appendix
+\section{Exact kernel constants}\label{app:catalogue}
+The table lists every new kernel certificate. Each displayed decimal is
+exact. Each row has a complete rational polynomial and subdivision
+certificate in \texttt{evidence/GEOMETRY\_CERTIFICATES.json}. The admissible
+domain and its independent verification are proved in
+Section~\ref{sec:kernel}. The whole-interval self caps are
+$1503067131/10^9$ for $r=23/40$ and $25/17$ for $r=3/5$.
+
+\begin{center}\small
+\begin{tabular}{@{}rrr@{}}\toprule
+$\rho$ & $\lambda$ for $r=23/40$ & $\lambda$ for $r=3/5$\\\midrule
+0.05 & 1.99998 & 1.99819\\
+0.1 & 1.99997 & 1.99784\\
+0.15 & 1.99992 & 1.99719\\
+0.2 & 1.99968 & 1.99612\\
+0.25 & 1.99911 & 1.99448\\
+0.28 & 1.99853 & 1.99312\\
+0.3 & 1.998 & 1.99202\\
+0.31 & 1.99768 & 1.9914\\
+0.32 & 1.99733 & 1.99074\\
+0.33 & 1.99694 & 1.99002\\
+0.34 & 1.99651 & 1.98925\\
+0.35 & 1.99603 & 1.98841\\
+0.36 & 1.99551 & 1.98751\\
+0.37 & 1.99493 & 1.98654\\
+0.38 & 1.99429 & 1.98549\\
+0.39 & 1.99359 & 1.98436\\
+0.4 & 1.99282 & 1.98313\\
+0.41 & 1.99197 & 1.98179\\
+0.42 & 1.99105 & 1.98033\\
+0.43 & 1.99003 & 1.97036\\
+0.44 & 1.96906 & 1.93243\\
+0.45 & 1.92508 & 1.89014\\
+\bottomrule\end{tabular}
+\end{center}
+\section{Gaussian remainder correction and a safe wall}\label{app:gaussian}
+This appendix replaces the $5/6$ Gaussian majorant in the retained
+Foundations, Part A, Section 4.1, and the narrower historical
+\nolinkurl{physical_eC0} wall comparison. The original archival source is
+preserved. The broad physical error allowances used by both the original and retuned
+source constructions remain valid.
+
+Let $T'=T+\pi t/8\ge T$ and $D=T-3$. In the all-real-abscissa
+Stirling/Taylor comparison accompanying \cite[(62)]{polymath}, the valid
+coarse inequality is
+\[
+\frac1{12(T'/2-0.33)}\le\frac1{6(T-3)},
+\]
+not the expression with numerator $1/3$ over $4(T-3)$. With the corrected
+numerator $2/3$,
+\[
+\frac{u^2+6|u|+2/3}{4D}\le\frac{u^2+11/12}{D},
+\]
+because multiplication of the difference by $4D$ gives
+$3(|u|-1)^2$. The Gaussian integral is therefore
+\begin{align}\label{eq:Gaussian}
+\widetilde G_\sigma(c)
+&=\int_{\mathbb R}e^{(u^2+11/12)/D+cu}
+\frac{e^{-(u-\sigma)^2/t}}{\sqrt{\pi t}}\,\dd u\nonumber\\
+&=\frac{\exp\left\{\dfrac{11}{12D}+
+\dfrac{\sigma^2/D+\sigma c+tc^2/4}{1-t/D}\right\}}
+{\sqrt{1-t/D}}.
+\end{align}
+At $t=0$ use its limiting value. Every actual disk satisfies
+$-1\le\sigma\le2$, $0\le t\le1/5$ and
+\[
+D\ge(X_0-4)/2-3>10^{12}.
+\]
+The elementary inequality $-\log(1-z)\le z/(1-z)$ gives
+\[
+\log\widetilde G_\sigma(0)<6/D,
+\quad\widetilde G_\sigma(0)-1<10^{-10}.
+\]
+For $|c|\le11/5$ the same explicit formula gives
+$\log\widetilde G_\sigma(c)<93/20$ and
+$\widetilde G_\sigma(c)<110$. This covers the required slopes
+$\log9$ and $-\log2$. The numerical constant inequalities are enclosed
+by rational positive Taylor sums and geometric tails.
+
+The two all-real-$\sigma$ coefficient errors in
+\cite[(62)--(64)]{polymath} therefore satisfy
+\[
+\delta_1+\delta_2
+\le\frac{(0.2+0.029)110}{N_0-1}<10^{-3}.
+\]
+For the far negative Gaussian tail $u=-r$, $r\ge100$, the complete
+coefficient majorant in the Foundations bounds the integrand by
+\[
+\exp\{-4r^2+20r+13+(r^2+1)/D\}\le e^{-3r^2}.
+\]
+The quadratic difference is positive and increasing from $r=100$ for
+$D\ge100$, and
+$\int_{100}^\infty e^{-3r^2}\dd r\le e^{-30000}/600<10^{-100}$.
+Thus the full remainder bracket is bounded by
+\[
+\tfrac12(1+10^{-10})+
+\frac{(0.2+0.029)110}{N_0-1}+10^{-100}<1.
+\]
+This establishes the retained coarse remainder bound:
+\[
+|R_{t,N}(\sigma+iT)|<e^{t\pi^2/64}|M_0(iT')|.
+\]
+Comparison with the physical normaliser then gives the same broad
+physical error bound
+\begin{equation}\label{eq:broad}
+e_C^{\rm broad}
+<4\exp\left\{-\frac{(1+y)L}{4}-\frac{tL^2}{16}+\frac1{10}\right\}.
+\end{equation}
+The existing producers subtract the allowance \eqref{eq:broad} on their
+actual Cauchy disks, together with the complete edge pair and the
+leading-model value and derivative error bounds. The separate safety checker verifies the 29 rational conditions and
+1,216 physical-error rows for each complete two-construction source.
+It is applied separately to the original and the retuned data.
+
+At the wall \eqref{eq:broad} is largest at $t=y=0$. Using
+$\pi<22/7$, $e^{1/10}<10/9$ and $7X_0/88>820^4$ gives
+\[
+e_C^{\rm broad}<\frac{40}{9\cdot820}=\frac2{369},
+\qquad\frac2{369}+10^{-6}<\frac1{180}.
+\]
+The two wall certificates give ideal-model floor $79/100$, full ideal
+displacement below $1/100$, and $e_A+e_B<10^{-6}$. Hence
+\[
+|H_t/B_t|>79/100-1/100-1/180=697/900>3/4.
+\]
+The narrower historical wall-error field is not used as a premise. The
+archived documents and hashes remain unchanged, and the new receipt records
+the replacement inequalities explicitly.
+
+\begin{thebibliography}{12}
+\setlength{\itemsep}{4pt}
+\bibitem{raymond149} D. J. Raymond,
+\emph{Correlated translated probes and the bound $\Lambda<0.149396$ for
+the de Bruijn--Newman constant}, Zenodo preprint, 21 September 2026,
+\href{https://doi.org/10.5281/zenodo.22867547}{doi:10.5281/zenodo.22867547}.
+Includes \emph{Analytic Foundations} and \nolinkurl{Proof_and_Replay.zip}.
+Public companion revision
+\nolinkurl{3e519044ed8f2f969d76dc0c34008727302e67ec}.
+
+\bibitem{openai78} OpenAI,
+\emph{The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane
+$\Rea(s)>7/8$}, OpenAI Math Release preprint
+\texttt{OAI:The-Quasi-Riemann-Hypothesis-September-30-2026}, 2026.
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026}{Pinned manuscript directory}.
+
+\bibitem{openai1112} OpenAI,
+\emph{The Quasi-Riemann Hypothesis}, 5 October 2026.
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026}{Pinned $11/12$ companion}.
+
+\bibitem{openaiLean} OpenAI,
+\nolinkurl{OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re},
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean}{\texttt{Nonvanishing.lean}},
+commit \nolinkurl{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb},
+Pinned supplied source identity. No Lean execution is reported here.
+
+\bibitem{polymath} D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+Research in the Mathematical Sciences \textbf{6} (2019), article 31.
+\href{https://doi.org/10.1007/s40687-019-0193-1}{doi:10.1007/s40687-019-0193-1}.
+Numbered references follow \href{https://arxiv.org/abs/1904.12438v2}{arXiv:1904.12438v2}.
+
+\bibitem{pt} D. J. Platt and T. S. Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+Bulletin of the London Mathematical Society \textbf{53} (2021), 792--797.
+\href{https://doi.org/10.1112/blms.12460}{doi:10.1112/blms.12460};
+\href{https://arxiv.org/abs/2004.09765}{arXiv:2004.09765}.
+
+\bibitem{gomila} J. Gomila,
+\emph{A computer-assisted proof of the bound
+$\Lambda\le893927/5000000=0.1787854$ for the de Bruijn--Newman constant},
+2026 manuscript cited in the retained earlier source.
+\href{https://github.com/judegomila/dbn-lambda-01787854-candidate-audit/tree/a74738deb6d5e0f76887cb36901da08b68dca705}{Pinned source cited by the prior publication}; context only.
+
+\bibitem{gordon} S. Gordon,
+\emph{A computer-assisted upper bound for the de Bruijn--Newman constant},
+2026 manuscript cited in the retained earlier source.
+\href{https://github.com/stefangordon/dbn-upper-bound/tree/64c47f2db67288beb62c24d7a0f7aedd645dc4b3}{Pinned source cited by the prior publication}; context only.
+
+\bibitem{planat} M. Planat,
+\emph{Collective Contraction in the de Bruijn--Newman Heat Flow:
+Off-Zero Logarithmic Derivatives and Certified Barrier Refinements},
+2026, \href{https://arxiv.org/abs/2609.37164}{arXiv:2609.37164}.
+
+\bibitem{arb} F. Johansson,
+\emph{Arb: efficient arbitrary-precision midpoint-radius interval arithmetic},
+IEEE Transactions on Computers \textbf{66} (2017), 1281--1292.
+\href{https://doi.org/10.1109/TC.2017.2690633}{doi:10.1109/TC.2017.2690633}.
+\bibitem{matchedsource} D. J. Raymond,
+\emph{Matched logarithmic source: analytic supplement}, version 1.0,
+10 October 2026. Included as \texttt{Matched\_Source\_Supplement.pdf};
+original analytic source and producer code retained in the accompanying
+\texttt{Proof\_and\_Replay.zip}.
+\bibitem{source} D. J. Raymond, \emph{Coupled probe motion source},
+\nolinkurl{BCLD_COUPLED_PROBE_MOTION_SOURCE_20260921},
+\texttt{PROOF.md}, Sections 4--12. Original analytic text and producers
+retained in the evidence dependency archive; typeset in
+\emph{Prior Analytic Foundations}. The Gaussian replacement is
+Appendix~\ref{app:gaussian} of the present paper.
+\end{thebibliography}
+
+
+\end{document}
