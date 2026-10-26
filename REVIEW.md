@@ -1,6 +1,10 @@
 # Independent review and reproducibility reports
 
-This is a conditional preprint offered for mathematical scrutiny. The H(7/8) zero-free assertion is a hypothesis; running numerical checks does not prove it. Neither this companion nor the author-supplied execution receipt constitutes external peer review or end-to-end formal verification.
+## Current mathematical status — 26 October 2026
+
+The original deposit states its comparison under H(7/8). That hypothesis is supplied by OpenAI’s proved zero-free half-plane Re(s) > 7/8 ([30 September 2026, Theorem 1.1](https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex), with [accompanying Lean formalisation](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean)). The pinned theorem `OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re` excludes zeros in the open half-plane, exactly matching the deposit’s boundary-inclusive H(7/8). Combining that theorem with the deposited comparison gives **Λ ≤ 0.116397726408291 < 0.116398** without an additional H(7/8) assumption.
+
+The complete de Bruijn–Newman argument remains open to mathematical scrutiny, including its analytic reductions and proof-to-code correspondence. The numerical checks do not themselves prove the external zero-free theorem. Neither this companion nor the author-supplied execution receipt constitutes external peer review or end-to-end formal verification. No Lean rerun is claimed for this clarification. The archived conditional title, publication wording and historical receipts remain unchanged.
 
 Useful review targets include:
 

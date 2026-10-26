@@ -16,16 +16,16 @@
       "sha256": "06dbb6cf3a1fdd1e8d394ecc907f0e238ceb1a275e84c1a18dd3e7b30d743430"
     },
     "README.md": {
-      "bytes": 6338,
-      "sha256": "84a7cba0c8faaa40f2e5c0cc8e9edc39e383273ec0bdbe302acb64e948e5fff1"
+      "bytes": 8344,
+      "sha256": "4b522ab20a25573b7dce4e8bf4b5dbaab3c18f3c8dc4c4c4ab9ca4ab439f3102"
     },
     "REPOSITORY_PROVENANCE.json": {
       "bytes": 6452,
       "sha256": "c8ea84fb22776ea5eb5358924ce7ee089a859e2e8e89f33b4c0d483af674c2e1"
     },
     "REVIEW.md": {
-      "bytes": 3153,
-      "sha256": "d4eef7b61293bd1d33490bd5c54531ee1be4325e6dbc1ed8f51985701b5a488a"
+      "bytes": 4182,
+      "sha256": "a489719a2a5ff6d298f3d4b579f2963cd483038baf442ddc9ab5cf00f18335dd"
     },
     "Verify_GitHub_Files.py": {
       "bytes": 2329,
