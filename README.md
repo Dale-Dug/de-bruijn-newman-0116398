@@ -1,6 +1,6 @@
 # Retuned translated probes: Λ < 0.116398
 
-**Dale James Raymond · Preprint · Version 1.0 · 10 October 2026**  
+**Dale James Raymond · Research preprint · Version 1.0 · 10 October 2026**  
 **Published paper and complete evidence:** [Zenodo record 23272725](https://zenodo.org/records/23272725)  
 **Version-specific DOI:** [10.5281/zenodo.23272725](https://doi.org/10.5281/zenodo.23272725)
 
@@ -22,6 +22,8 @@ The alternate exact ceiling is 0.116397726408312. Both main histories have 14,89
 
 This repository is a lightweight companion to the published deposit. It follows the format of the separate [0.149396 companion](https://github.com/Dale-Dug/de-bruijn-newman-0149396); the earlier publication is not the DOI or hypothesis of this result.
 
+**Latest publication:** [A computer-assisted bound Λ ≤ 0.107964910079 (29 October 2026)](https://zenodo.org/records/23752103), with its [verification companion](https://github.com/Dale-Dug/de-bruijn-newman-0107965).
+
 ## Research overview
 
 Dale James Raymond · [ORCID 0009-0001-1682-8529](https://orcid.org/0009-0001-1682-8529)
@@ -31,7 +33,7 @@ Dale James Raymond · [ORCID 0009-0001-1682-8529](https://orcid.org/0009-0001-16
 - **10 October 2026:** [Retuned translated probes, Λ < 0.116398](https://zenodo.org/records/23272725), published with an original conditional title; see the [current mathematical status](https://github.com/Dale-Dug/de-bruijn-newman-0116398#current-mathematical-status--26-october-2026).
 - **29 October 2026:** [A computer-assisted bound, Λ ≤ 0.107964910079](https://zenodo.org/records/23752103).
 
-GitHub companions: [0.149396](https://github.com/Dale-Dug/de-bruijn-newman-0149396) · [0.116398](https://github.com/Dale-Dug/de-bruijn-newman-0116398) · [0.107965](https://github.com/Dale-Dug/de-bruijn-newman-0107965).
+GitHub companions: [0.149396](https://github.com/Dale-Dug/de-bruijn-newman-0149396) · [0.116398](https://github.com/Dale-Dug/de-bruijn-newman-0116398) · [0.107964910079](https://github.com/Dale-Dug/de-bruijn-newman-0107965).
 
 ## Read the publication
 
